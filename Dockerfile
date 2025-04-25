@@ -33,5 +33,5 @@ RUN chmod -R 775 storage bootstrap/cache
 # Expose Laravel dev server port
 EXPOSE 10000
 
-# Start the Laravel application
-CMD php artisan serve --host=0.0.0.0 --port=10000
+# Run migrations and start the Laravel application on container start
+CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=10000
