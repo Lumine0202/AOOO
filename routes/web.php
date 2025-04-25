@@ -11,7 +11,3 @@ Route::get('/erettsegi/{erettsegi}', [ErettsegiController::class, 'show'])->name
 Route::get('/erettsegi/{erettsegi}/edit', [ErettsegiController::class, 'edit'])->name('erettsegi.edit');
 Route::put('/erettsegi/{erettsegi}', [ErettsegiController::class, 'update'])->name('erettsegi.update');
 
-Route::get('/migrate', function () {
-    Artisan::call('migrate', ['--force' => true]);
-    return 'Migrations ran!';
-});
