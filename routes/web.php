@@ -17,14 +17,12 @@ Route::put('/erettsegi/{erettsegi}', [ErettsegiController::class, 'update'])->na
 
 
 Route::get('/migrate', function () {
-    Artisan::call('migrate', ['--force' => true]);
-    return response('Migrations REALLY ran 🎉', 200)
-        ->withoutCookie('laravel_session')
-        ->header('Cache-Control', 'no-store');
-})->withoutMiddleware([
-    \Illuminate\Session\Middleware\StartSession::class,
-    \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-    \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-    \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-]);
+    try {
+        Artisan::call('migrate', ['--force' => true]);
+        return response('✅ Migrations ran: ' . Artisan::output(), 200);
+    } catch (\Exception $e) {
+        return response('❌ Migration failed: ' . $e->getMessage(), 500);
+    }
+});
+
 
