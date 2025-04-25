@@ -12,23 +12,26 @@ RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/lo
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy all files to container
+# Copy all files into the container
 COPY . .
+
+# ✅ Create the SQLite database file so Laravel can use it
+RUN mkdir -p database && touch database/database.sqlite
 
 # Install PHP dependencies
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
-# ✅ Create .env from example to avoid artisan crash
+# ✅ Create .env from example
 RUN cp .env.example .env
 
 # Generate app key
 RUN php artisan key:generate
 
-# Set permissions for Laravel
+# Set proper permissions for Laravel
 RUN chmod -R 775 storage bootstrap/cache
 
-# Expose port for Laravel dev server
+# Expose Laravel dev server port
 EXPOSE 10000
 
-# Start Laravel dev server
+# Start the Laravel application
 CMD php artisan serve --host=0.0.0.0 --port=10000
