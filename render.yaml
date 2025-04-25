@@ -2,7 +2,10 @@ services:
   - type: web
     name: aooo
     env: php
-    buildCommand: "composer install && php artisan migrate --force"
+    buildCommand: |
+      echo "Installing Composer..." && curl -sS https://getcomposer.org/installer | php
+      echo "Running composer install..." && php composer.phar install
+      echo "Running migrations..." && php artisan migrate --force
     startCommand: "php artisan serve --host=0.0.0.0 --port=10000"
     envVars:
       - key: APP_ENV
