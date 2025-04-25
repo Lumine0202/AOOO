@@ -16,13 +16,22 @@ Route::get('/erettsegi/{erettsegi}/edit', [ErettsegiController::class, 'edit'])-
 Route::put('/erettsegi/{erettsegi}', [ErettsegiController::class, 'update'])->name('erettsegi.update');
 
 
+
 Route::get('/migrate', function () {
     try {
         Artisan::call('migrate', ['--force' => true]);
-        return response('✅ Migrations ran: ' . Artisan::output(), 200);
+        return response('✅ Migrations ran: ' . Artisan::output(), 200)
+            ->withoutCookie('laravel_session')
+            ->header('Cache-Control', 'no-store');
     } catch (\Exception $e) {
         return response('❌ Migration failed: ' . $e->getMessage(), 500);
     }
-});
+})->withoutMiddleware([
+    \Illuminate\Session\Middleware\StartSession::class,
+    \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+    \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+    \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+]);
+
 
 
