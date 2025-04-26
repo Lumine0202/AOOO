@@ -6,7 +6,7 @@
   <title>Érettségi</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  
+  @vite('resources/js/index.js')
 </head>
 <body class="text-sm">
   <!-- Menu -->
@@ -69,8 +69,9 @@
     <div id="list-groups">
       <h2 class="text-2xl mb-4">Tételek</h2>
       
-      <!-- from db -->
+      
       @foreach ($groups as $group)
+      <!-- from db -->
         <div class="mb-6">         
           <h3 class="text-xl mb-4">{{ $group->name }}</h3>
           <ul class="space-y-4">
@@ -86,25 +87,12 @@
             @endforeach
           </ul>
         </div>
+      <!-- from db end -->
       @endforeach
-      <!-- from db -->
+      
 
     </div>
   </div>
 
-  <script>
-    function showSection(sectionId) {
-      // Hide all sections
-      document.querySelectorAll('#add-group, #add-item, #list-groups').forEach(section => {
-        section.classList.add('hidden');
-      });
-
-      // Show the selected section
-      document.getElementById(sectionId).classList.remove('hidden');
-    }
-
-    // Show the "List Groups" section by default
-    showSection('list-groups');
-  </script>
 </body>
 </html>
