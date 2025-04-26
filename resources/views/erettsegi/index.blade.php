@@ -5,21 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Érettségi</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
   <style>
-    body {
-      background-color: #333333;
-      /* font-family: Georgia, 'Times New Roman', Times, serif; */
-      font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont';
-      color: #e6e6e6;
-    }
-    h1, h2 {
-      color: #5998d6;
-      border-bottom: solid 1px #555;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-    h3 {
-      font-family: Georgia, 'Times New Roman', Times, serif;
-    }
+    
     label {
       color: #ffffff;
     }

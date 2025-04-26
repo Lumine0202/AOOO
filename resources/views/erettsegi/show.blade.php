@@ -9,9 +9,8 @@
     body {
       background-color: #333333;
       /* font-family: Georgia, 'Times New Roman', Times, serif; */
-      /* font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont'; */
+      font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont';
       /* font-family: Tahoma; */
-      font-family: sans-serif;
       color: #e6e6e6;
     }
     h1, h2 {
