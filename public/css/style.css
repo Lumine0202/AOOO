@@ -30,6 +30,11 @@ body {
     color: #f0f0f0;
   }
 
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #99ccff;
+  }
+
   .hidden {
     display: none;
   }

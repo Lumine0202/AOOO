@@ -6,14 +6,7 @@
   <title>{{ $erettsegi->title }} Szerkesztése</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  <style>
   
-    input:focus, textarea:focus, select:focus {
-      outline: none;
-      border-color: #99ccff;
-    }
-  
-  </style>
 </head>
 <body class="text-sm">
   <div class="container mx-auto p-6">
