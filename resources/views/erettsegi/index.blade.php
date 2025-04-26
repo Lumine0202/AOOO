@@ -6,76 +6,7 @@
   <title>Érettségi</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  <style>
-
-    label {
-      color: #ffffff;
-    }
-    a {
-      color: #5998d6;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .form-section {
-      background-color: #333333;
-    }
-    input, textarea, select {
-      background-color: #3a3a3a;
-      border-color: #666;
-      color: #f0f0f0;
-    }
-    button {
-      background-color: #336699;
-    }
-    button:hover {
-      background-color: #4477aa;
-    }
-    .buttonDesign {
-        background: linear-gradient(to bottom, #555 45%, #242424 100%);
-      color: #ebeeec;
-      padding: 2px 10px;
-      border: none;
-      border-radius: 6px;
-      font-family: Arial, sans-serif;
-      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1),
-                  0 1px 2px rgba(0, 0, 0, 0.5);
-      cursor: pointer;
-    }
-    .buttonDesign:hover {
-        background-image: linear-gradient(to bottom right, #242424 10%, #555 60%);
-    }
-    .hidden {
-      display: none;
-    }
-    .menuDesign {
-      background: url('images/black-noise.jpg') center center;
-      box-shadow: inset 0 -6px 10px rgba(0, 0, 0, 0.35), 1px 1px 3px -1px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.85);
-    }
-    .cursor-pointer {
-      cursor: pointer;
-    }
-    .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  background-color: #333333;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.border-bottom {
-  border-bottom: solid 1px #555;
-}
-  </style>
+  
 </head>
 <body class="text-sm">
   <!-- Menu -->
