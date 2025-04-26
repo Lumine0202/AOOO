@@ -66,8 +66,10 @@
     <!-- List Groups and Items -->
     <div id="list-groups">
       <h2 class="text-2xl mb-4">Tételek</h2>
+      
+      <!-- from db -->
       @foreach ($groups as $group)
-        <div class="mb-6">
+        <div class="mb-6">         
           <h3 class="text-xl mb-4">{{ $group->name }}</h3>
           <ul class="space-y-4">
             @foreach ($group->erettsegis as $item)
@@ -83,6 +85,8 @@
           </ul>
         </div>
       @endforeach
+      <!-- from db -->
+
     </div>
   </div>
 

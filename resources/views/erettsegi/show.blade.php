@@ -9,7 +9,7 @@
 
 </head>
 <body class="text-sm">
-  <div class="max-w-3xl mx-auto p-6">
+  <!-- <div class="max-w-3xl mx-auto p-6">
 
     <h1 class="text-3xl mb-4">{{ $erettsegi->title }}</h1>
 
@@ -28,6 +28,35 @@
       </a>
     </div>
 
-  </div>
+  </div> -->
+
+    <div class="tetelek-content-div">
+
+      <div class="title-div">
+          <h2 class="tetel-title border-bottom">{{ $erettsegi->title }}</h2>
+      </div>
+
+      <p class="tetelek-content-p">
+        {{ $erettsegi->content }}
+      </p>
+
+      <div class="flex gap-2">
+      <a href="{{ route('erettsegi.index') }}"
+         class="buttonDesign">
+         Vissza
+      </a>
+      <a href="{{ route('erettsegi.edit', $erettsegi->id) }}"
+         class="buttonDesign">
+         Szerkesztés
+      </a>
+    </div>
+
+    </div>
+
+
+
+    
+
+
 </body>
 </html>
