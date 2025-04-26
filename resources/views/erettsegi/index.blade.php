@@ -12,12 +12,12 @@
   <!-- Menu -->
   <nav class="mt-6 menuDesign">
       <ul class="flex">
-      <li onclick="showSection('list-groups')" class="cursor-pointer" style="padding: 0.429em 0.75em;">Tételek</li>
+      <li onclick="showSection('list-groups')" class="cursor-pointer menu-li-style">Tételek</li>
         <div class="dropdown cursor-pointer">
-          <li style="padding: 0.429em 0.75em;">Hozzáadás</li>
+          <li class="menu-li-style">Hozzáadás</li>
           <ul class="dropdown-content">
-            <li onclick="showSection('add-group')" class="cursor-pointer" style="padding: 0.429em 0.75em;">Csoport hozzáadása</li>
-            <li onclick="showSection('add-item')" class="cursor-pointer" style="padding: 0.429em 0.75em;">Tétel hozzáadása</li>
+            <li onclick="showSection('add-group')" class="cursor-pointer menu-li-style">Csoport hozzáadása</li>
+            <li onclick="showSection('add-item')" class="cursor-pointer menu-li-style">Tétel hozzáadása</li>
           </ul>
         </div>
       </ul>

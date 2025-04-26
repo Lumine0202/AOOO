@@ -10,7 +10,7 @@
 </head>
 <body class="text-sm">
   <div class="container mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-6" style="border-bottom: solid 1px #555;">{{ $erettsegi->title }} Szerkesztése</h1>
+    <h1 class="text-3xl font-bold mb-6 border-bottom">{{ $erettsegi->title }} Szerkesztése</h1>
 
     <form action="{{ route('erettsegi.update', $erettsegi->id) }}" method="POST" class="p-4 rounded shadow form-section">
       @csrf
