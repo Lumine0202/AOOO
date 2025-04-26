@@ -18,12 +18,16 @@
 
       <div class="mb-4">
         <label for="title" class="block text-sm font-medium">Cím</label>
-        <input type="text" name="title" id="title" value="{{ $erettsegi->title }}" required class="mt-1 block w-full rounded-md shadow-sm px-2 py-1">
+        <input type="text" name="title" id="title" value="{{ $erettsegi->title }}" required 
+               class="mt-1 block w-full rounded-md shadow-sm px-2 py-1" 
+               autocomplete="off">
       </div>
 
       <div class="mb-4">
         <label for="content" class="block text-sm font-medium">Tartalom</label>
-        <textarea name="content" id="content" required class="mt-1 block w-full rounded-md shadow-sm px-2 py-1" rows="6">{{ $erettsegi->content }}</textarea>
+        <textarea name="content" id="content" required 
+                  class="mt-1 block w-full rounded-md shadow-sm px-2 py-1" rows="6" 
+                  autocomplete="off">{{ $erettsegi->content }}</textarea>
       </div>
 
       <div class="mb-4">

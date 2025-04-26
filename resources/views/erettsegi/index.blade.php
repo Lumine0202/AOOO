@@ -32,7 +32,9 @@
         @csrf
         <div class="mb-4">
           <label for="name" class="block text-sm font-medium">Csoport neve</label>
-          <input type="text" name="name" id="name" placeholder="Csoport neve" required class="mt-1 block w-full rounded-md shadow-sm border px-2 py-1">
+          <input type="text" name="name" id="name" placeholder="Csoport neve" required 
+                 class="mt-1 block w-full rounded-md shadow-sm border px-2 py-1" 
+                 autocomplete="off">
         </div>
         <button type="submit" class="buttonDesign">Csoport hozzáadása</button>
       </form>
