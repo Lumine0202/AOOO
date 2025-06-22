@@ -30,12 +30,12 @@ RUN php artisan key:generate
 # Set proper permissions for Laravel
 RUN chmod -R 775 storage bootstrap/cache
 
-# Install Node.js and npm
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+# Use Node 18 for Vite compatibility
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs
 
-# Install npm dependencies and build assets
-RUN npm ci && npm run build
+# Build assets and show manifest for debug
+RUN npm ci && npm run build && ls -l public/build
 
 # Expose Laravel dev server port
 EXPOSE 10000
