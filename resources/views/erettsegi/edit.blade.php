@@ -30,16 +30,18 @@
                   autocomplete="off">{{ $erettsegi->content }}</textarea>
       </div>
 
-      <div class="mb-4">
-        <label for="group_id" class="block text-sm font-medium">Csoport</label>
-        <select name="group_id" id="group_id" required class="mt-1 block w-full rounded-md shadow-sm px-2 py-1">
-            @foreach ($groups as $group)
-                <option value="{{ $group->id }}" {{ $group->id == $erettsegi->group_id ? 'selected' : '' }}>
-                    {{ $group->name }}
-                </option>
-            @endforeach
-        </select>
-      </div>
+      @isset($groups)
+        <div class="mb-4">
+          <label for="group_id" class="block text-sm font-medium">Csoport</label>
+          <select name="group_id" id="group_id" required class="mt-1 block w-full rounded-md shadow-sm px-2 py-1">
+              @foreach ($groups as $group)
+                  <option value="{{ $group->id }}" {{ $group->id == $erettsegi->group_id ? 'selected' : '' }}>
+                      {{ $group->name }}
+                  </option>
+              @endforeach
+          </select>
+        </div>
+      @endisset
 
       <button type="submit" class="buttonDesign">Mentés</button>
       <a href="{{ route('erettsegi.show', $erettsegi->id) }}" class="buttonDesign" style="padding: 4px 10px;">Mégse</a>

@@ -11,8 +11,7 @@ class ErettsegiController extends Controller
     // List all items
     public function index()
     {
-        // Fetch groups with their associated erettsegis
-        $groups = Group::with('erettsegis')->get();
+        $groups = \App\Models\Group::with('erettsegis')->get();
         return view('erettsegi.index', compact('groups'));
     }
 
