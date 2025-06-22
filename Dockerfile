@@ -30,6 +30,13 @@ RUN php artisan key:generate
 # Set proper permissions for Laravel
 RUN chmod -R 775 storage bootstrap/cache
 
+# Install Node.js and npm
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+    && apt-get install -y nodejs
+
+# Install npm dependencies and build assets
+RUN npm ci && npm run build
+
 # Expose Laravel dev server port
 EXPOSE 10000
 
